@@ -1,5 +1,5 @@
 // Assignment Code
-var passwordLength = ''
+var passwordLength
 var  upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 console.log(upperCase)
 var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
@@ -9,58 +9,69 @@ console.log(numeric)
 var specialCharacter = '@#$!&%';
 console.log(specialCharacter)
 
-function generatePassword () {
-  var passwordLength = prompt("How many passwords would you like in your password? \n Pick a number between 8 and 128.");
-  var upperCase = confirm("would you like upperCase? \nPress ok for yes. ress councel for no. Pick a letter.");
-  var lowerCase = confirm("would you like lowerCase? \nPress ok for yes. Press councel for no. Pick a letter.");
-  var numeric = confirm("would you like a numeric? \nPress ok for yes. Press councel for no. Pick a number.");
-  var specialCharacter = confirm("would you like a specialCharacter? \nPress ok for yes. Press councel for no. Pick a character.");
+var passwordarry =[];
 
-  if (!passwordLength && !lowerCase && !upperCase && !numeric && !specialCharacter){
+function generatePassword () {
+  var upasswordLength = prompt("How many passwords would you like in your password? \n Pick a number between 8 and 128.");
+  var uupperCase = confirm("would you like upperCase? \nPress ok for yes. ress councel for no. Pick a letter.");
+  var ulowerCase = confirm("would you like lowerCase? \nPress ok for yes. Press councel for no. Pick a letter.");
+  var unumeric = confirm("would you like a numeric? \nPress ok for yes. Press councel for no. Pick a number.");
+  var uspecialCharacter = confirm("would you like a specialCharacter? \nPress ok for yes. Press councel for no. Pick a character.");
+
+  if (!upasswordLength && !ulowerCase && !uupperCase && !unumeric && !uspecialCharacter){
     alert("You need to choose atleast two types of characters to create a password.");
      return; generatePassword();
   }
 
-  if (passwordLength<9 || passwordLength>128){
+  if (upasswordLength<9 || upasswordLength>128){
     alert("Your password must be 8 to 128 characters");
      return generatePassword();
   }
 
- if (lowerCase){
-   for (var i =0; i < lowerCase.passwordLength; i++){
+ if (ulowerCase){
+   for (var i =0; i < lowerCase.length; i++){
     passwordarry.push(lowerCase[i]);
   }
 
-  if (upperCase){
-    for (var i = 0; i < upperCase.passwordLength; i++){
-      passwordarry.push(upperCase[i])
+  if (uupperCase){
+    for (var i = 0; i < upperCase.length; i++){
+      passwordarry.push(upperCase[i]);
     }
   }
 
-  if (numeric){
-    for (var i = 0; i < numeric.passwordLength; i++){
+  if (unumeric){
+    for (var i = 0; i < numeric.length; i++){
       passwordarry.push(numeric[i]);
     }
   }
 
-  if (specialCharacter){
-    for (var i = 0; i < specialCharacter.passwordLength; i++){
+  if (uspecialCharacter){
+    for (var i = 0; i < specialCharacter.length; i++){
       passwordarry.push(specialCharacter[i]);
     }
   }
   }
 
-  var newerpassword = []
+  var newerpassword = ""
 
-  function randompassword() { 
-    var newpassword = passwordarry[Math.random()*passwordarry.passwordLength];
+  for (var i = 0; i < upasswordLength; i++){
+    newerpassword = newerpassword + passwordarry[Math.floor(Math.random()*passwordarry.length)]
+  }
+  console.log(passwordarry)
+   console.log(newerpassword)
+   return newerpassword; 
 
-    if (newerpassword.length < passwordLength) {
-      for(i=0; i < passwordLength; i++);
-      randompassword(); 
-    }
-  } 
-  return newerpassword.join("")
+  // function randompassword() { 
+  //   var newpassword = passwordarry[Math.random()*passwordarry.passwordLength];
+
+  //   if (newerpassword.length < passwordLength) {
+  //     for(i=0; i < passwordLength; i++);
+  //     randompassword(); 
+  //   }
+  // } 
+  // var test = newerpassword.join("")
+  // return test;
+  // console.log(test)
 }
 
 var generateBtn = document.querySelector("#generate");
