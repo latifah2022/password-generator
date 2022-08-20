@@ -4,7 +4,7 @@
 so  that I can create a strong password that provides greater security.
 
 This is the site:
-[Github](https://latifah2022.github.io/password-generator/)
+![Github](https://latifah2022.github.io/password-generator/)
 
 #Acceptance Criteria
 
@@ -20,4 +20,4 @@ My input should be validated and at least one character type should be selected
 
  A password is generated that matches the selected criteria
 
- the password is either displayed in an alert or written to the page
+ the password is either displayed in an alert or written to the page.

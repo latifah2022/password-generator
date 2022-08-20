@@ -1,4 +1,3 @@
-// Assignment Code
 var passwordLength
 var  upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 console.log(upperCase)
@@ -61,17 +60,6 @@ function generatePassword () {
    console.log(newerpassword)
    return newerpassword; 
 
-  // function randompassword() { 
-  //   var newpassword = passwordarry[Math.random()*passwordarry.passwordLength];
-
-  //   if (newerpassword.length < passwordLength) {
-  //     for(i=0; i < passwordLength; i++);
-  //     randompassword(); 
-  //   }
-  // } 
-  // var test = newerpassword.join("")
-  // return test;
-  // console.log(test)
 }
 
 var generateBtn = document.querySelector("#generate");
