@@ -4,7 +4,7 @@
 so  that I can create a strong password that provides greater security.
 
 This is the site:
-![Github](https://latifah2022.github.io/password-generator/)
+[Github](https://latifah2022.github.io/password-generator/)
 
 #Acceptance Criteria
 
