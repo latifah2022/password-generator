@@ -21,3 +21,6 @@ My input should be validated and at least one character type should be selected
  A password is generated that matches the selected criteria
 
  the password is either displayed in an alert or written to the page.
+
+
+ ![Image](./Assets/03-javascript-homework-demo.png)
